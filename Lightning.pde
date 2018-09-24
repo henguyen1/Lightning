@@ -1,10 +1,10 @@
-boom one;
+
 void setup()
 {
   size(800,800);
   background(0,150,150);
   strokeWeight(4);
-  one = new boom(400,350);
+
 }
 
 int startX = 400;
@@ -41,8 +41,6 @@ void draw()
 		noLoop();
 		
 	}
-	one.move();
-	one.show();
 			
 }	
 
@@ -60,26 +58,5 @@ void building()
 	endShape(CLOSE);
 	
 }
-class boom // boom is in top left corner... idk what to do help me
-{
-	int nendX, nendY, sstartX, sstartY;
-	boom(int sstartX, int sstartY)
-	{
-		sstartX = nendX;
-		sstartY = nendY;
-	}
 
-	void show()
-	{
-		stroke(255,177,5);
-		line(sstartX,sstartY,nendX,nendY);
-	}
-
-	void move()
-	{
-		nendX = sstartX + ((int)(Math.random() * 18) - 9);
-		nendY = sstartY + ((int)(Math.random() + 9));
-	}
-	
-}
 
